@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopApp - Products</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h1>Product Details</h1>
+
+    <!-- ADD FORM -->
+    <div class="add-form">
+      <input type="text" id="add-name" placeholder="Name"/>
+      <input type="text" id="add-desc" placeholder="Description"/>
+      <button onclick="addProduct()">Add</button>
+    </div>
+
+    <!-- TABLE -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="product-tbody">
+        <tr><td colspan="3">Loading...</td></tr>
+      </tbody>
+    </table>
+
+    <div id="msg"></div>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div id="editModal" class="modal-bg" style="display:none;">
+    <div class="modal">
+      <h3>Edit Product</h3>
+      <input type="hidden" id="edit-id"/>
+      <label>Name</label>
+      <input type="text" id="edit-name"/>
+      <label>Description</label>
+      <input type="text" id="edit-desc"/>
+      <div class="modal-btns">
+        <button onclick="saveEdit()">Save</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Aditi V Shastry | 4BD23IS005 | IS&amp;E Dept
+  </footer>
+
+  <script src="about.js"></script>
+</body>
+</html>
